@@ -123,8 +123,9 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://pascuin.github.io/single-auction/",
-            "message": "Deploying latest changes"
+            "baseHref": "/",
+            "message": "Deploying latest changes",
+            "cname": "http://single-auction.papers.tech/"
           }
         }
       }
