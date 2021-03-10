@@ -14,7 +14,7 @@ export class LandingComponent implements OnInit {
 
   constructor(private readonly storeService: StoreService) {
     this.storeService.resetFilters()
-    this.storeService.setView('auctions')
+    this.storeService.setView('explore')
     this.storeService.setSortType('time')
     this.storeService.setSortDirection('asc')
     this.storeService.setSearchString('')

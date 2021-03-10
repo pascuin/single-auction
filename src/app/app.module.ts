@@ -49,6 +49,8 @@ import { AmountConverterPipe } from './pipes/amount.pipe'
 import { CountdownComponent } from './components/countdown/countdown.component'
 import { ColorCardListComponent } from './components/color-card-list/color-card-list.component'
 import { ColorHistoryModalComponent } from './components/color-history-modal/color-history-modal.component'
+import { AboutUsComponent } from './pages/about-us/about-us.component'
+import { FaqComponent } from './pages/faq/faq.component'
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { ColorHistoryModalComponent } from './components/color-history-modal/col
     AmountConverterPipe,
     CountdownComponent,
     ColorCardListComponent,
+    AboutUsComponent,
+    FaqComponent,
   ],
   imports: [
     BrowserModule,

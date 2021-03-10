@@ -69,7 +69,7 @@
           </h3>
 
           <p class="text-muted font-weight-light m-0 pb-5">
-            #{{ color.token_id }} • {{ color.category | titlecase }}
+            {{ color.description }}
           </p>
           <ng-container *ngIf="state === 'free'">
             <div class="row py-2">
@@ -397,6 +397,7 @@
                 }}
               </button>
             </ng-container>
+                        -->
 
             <ng-container *ngIf="state === 'free'">
               <button
@@ -420,7 +421,6 @@
                 ></span>
               </button>
             </ng-container>
-                        -->
           </div>
         </div>
       </div>
