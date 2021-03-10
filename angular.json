@@ -123,9 +123,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/",
-            "message": "Deploying latest changes",
-            "cname": "www.tzcolors.io"
+            "baseHref": "/single-auction/",
+            "message": "Deploying latest changes"
           }
         }
       }
