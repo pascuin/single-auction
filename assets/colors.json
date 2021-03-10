@@ -1,0 +1,15 @@
+[
+  {
+    "token_id": 0,
+    "name": "OneOf token",
+    "description": "Description goes here",
+    "symbol": "ONEOF",
+    "decimals": 0,
+    "isBooleanAmount": true,
+    "shouldPreferSymbol": true,
+    "thumbnailUri": "ipfs://QmV3a1TAdCncfs84Gi9msDsDJVQBDt6Wb5gJRVuFRfrgtG",
+    "artifactUri": "ipfs://QmV3a1TAdCncfs84Gi9msDsDJVQBDt6Wb5gJRVuFRfrgtG",
+    "displayUri": "ipfs://QmV3a1TAdCncfs84Gi9msDsDJVQBDt6Wb5gJRVuFRfrgtG",
+    "externalUri": "ipfs://QmV3a1TAdCncfs84Gi9msDsDJVQBDt6Wb5gJRVuFRfrgtG"
+  }
+]
