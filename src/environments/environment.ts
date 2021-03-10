@@ -4,12 +4,12 @@
 
 export const environment = {
   production: false,
-  tzColorsContract: 'KT1FyaDqiMQWg7Exo7VUiXAgZbd2kCzo3d4s',
-  tzColorsAuctionContract: 'KT1CpeSQKdkhWi4pinYcseCFKmDhs5M74BkU',
+  oneofContract: 'KT1FyaDqiMQWg7Exo7VUiXAgZbd2kCzo3d4s',
+  oneofAuctionContract: 'KT1CpeSQKdkhWi4pinYcseCFKmDhs5M74BkU',
   rpcUrl: 'https://mainnet-tezos.giganode.io',
-  appName: 'tzcolors',
-  colorsBigmapUrl: 'https://api.better-call.dev/v1/bigmap/mainnet/411/keys',
-  auctionBigmapUrl: 'https://api.better-call.dev/v1/bigmap/mainnet/409/keys',
+  appName: 'OneOf',
+  oneofBigmapUrl: 'https://api.better-call.dev/v1/bigmap/edo2net/26125/keys',
+  auctionBigmapUrl: 'https://api.better-call.dev/v1/bigmap/edo2net/26115/keys',
   indexerUrl: 'https://tzcolors-indexer.prod.gke.papers.tech/api/v1/',
 }
 

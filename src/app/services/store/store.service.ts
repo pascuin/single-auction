@@ -482,8 +482,8 @@ export class StoreService {
   async getColorOwners() {
     const url =
       hasInitialColorState === false
-        ? `${environment.colorsBigmapUrl}?size=10000`
-        : `${environment.colorsBigmapUrl}?size=20`
+        ? `${environment.oneofBigmapUrl}?size=10`
+        : `${environment.oneofBigmapUrl}?size=20`
 
     const data = await this.http.get<RootObject[]>(url).toPromise()
 
