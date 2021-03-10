@@ -3,7 +3,8 @@ import { Component, OnInit, Input } from '@angular/core'
 import BigNumber from 'bignumber.js'
 
 import { BsModalService } from 'ngx-bootstrap/modal'
-import { first } from 'rxjs/operators'
+import { Observable } from 'rxjs'
+import { first, map } from 'rxjs/operators'
 import { AuctionModalComponent } from 'src/app/components/auction-modal/auction-modal.component'
 import { BeaconService } from 'src/app/services/beacon/beacon.service'
 import {
@@ -53,6 +54,8 @@ export class ColorCardItemComponent implements OnInit {
 
   state: ColorState = 'loading'
 
+  price: Observable<number> = new Observable()
+
   constructor(
     private readonly modalService: BsModalService,
     private readonly beaconService: BeaconService,
@@ -77,6 +80,14 @@ export class ColorCardItemComponent implements OnInit {
     }
 
     this.updateCardState()
+
+    this.price = this.storeService.fiatPrice$.pipe(
+      map((price) => {
+        return (
+          (parseInt(this.color?.auction?.bidAmount ?? '0') * price) / 1_000_000
+        )
+      })
+    )
   }
 
   openAddress(address: string) {
