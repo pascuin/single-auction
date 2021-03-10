@@ -146,7 +146,7 @@ export class ColorCardItemComponent implements OnInit {
 
   async createInitialAuction() {
     if (this.color && !this.color.loading) {
-      await this.beaconService.createInitialAuction(this.color.token_id)
+      await this.beaconService.createInitialAuction(0)
       console.log('Creating auction done')
     } else {
       console.log('Creating auction already in progress')

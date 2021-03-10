@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  oneofContract: 'KT1UdtxpihQBxHTPYEuh71dBBZTjZBZucXXw',
+  oneofContract: 'KT1PsLoa7ogmUAFKk2baCmqcDvesC8m5V4Dg',
   oneofAuctionContract: 'KT1QYTCmnEzPWRxx1eJZAbTWaFLMPJf46BWz',
   rpcUrl: 'https://testnet-tezos.giganode.io',
   appName: 'OneOf',
