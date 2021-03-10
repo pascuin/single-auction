@@ -35,9 +35,6 @@ import { HeaderItemComponent } from './components/header-item/header-item.compon
 import { LandingComponent } from './pages/landing/landing.component'
 import { FooterItemComponent } from './components/footer-item/footer-item.component'
 import { ColorCardItemComponent } from './components/nft-card-item/nft-card-item.component'
-import { ExploreComponent } from './pages/explore/explore.component'
-import { AuctionsComponent } from './pages/auctions/auctions.component'
-import { MyColorsComponent } from './pages/my-colors/my-colors.component'
 import { AuctionModalComponent } from './components/auction-modal/auction-modal.component'
 import { StoreModule } from '@ngrx/store'
 import { reducers, metaReducers } from './reducers'
@@ -51,9 +48,7 @@ import { ShortenPipe } from './pipes/shorten.pipe'
 import { AmountConverterPipe } from './pipes/amount.pipe'
 import { CountdownComponent } from './components/countdown/countdown.component'
 import { ColorCardListComponent } from './components/color-card-list/color-card-list.component'
-import { WatchlistComponent } from './pages/watchlist/watchlist.component'
 import { ColorHistoryModalComponent } from './components/color-history-modal/color-history-modal.component'
-import { StatsComponent } from './pages/stats/stats.component'
 
 @NgModule({
   declarations: [
@@ -62,17 +57,12 @@ import { StatsComponent } from './pages/stats/stats.component'
     LandingComponent,
     FooterItemComponent,
     ColorCardItemComponent,
-    ExploreComponent,
-    AuctionsComponent,
-    MyColorsComponent,
     AuctionModalComponent,
     ColorHistoryModalComponent,
     ShortenPipe,
     AmountConverterPipe,
     CountdownComponent,
     ColorCardListComponent,
-    WatchlistComponent,
-    StatsComponent,
   ],
   imports: [
     BrowserModule,
