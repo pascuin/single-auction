@@ -146,7 +146,11 @@ export class StoreService {
   public loading$: Observable<boolean>
   public favorites$: Observable<number[]>
 
+  public fiatPrice$: Observable<number>
+
   private _colors$: ReplaySubject<Color[]> = new ReplaySubject(1)
+
+  private _fiatPrice: ReplaySubject<number> = new ReplaySubject(1)
 
   private _favorites: BehaviorSubject<number[]> = new BehaviorSubject<number[]>(
     []
@@ -211,6 +215,7 @@ export class StoreService {
     this.view$ = this._view.asObservable()
     this.loading$ = this._loading.asObservable()
     this.favorites$ = this._favorites.asObservable()
+    this.fiatPrice$ = this._fiatPrice.asObservable()
 
     this.initFromStorage()
 
@@ -703,11 +708,23 @@ export class StoreService {
     }
   }
 
+  async getPrice() {
+    const data = await this.http
+      .get<any>(
+        `https://api.coingecko.com/api/v3/simple/price?ids=tezos&vs_currencies=usd`
+      )
+      .toPromise()
+
+    console.log(data)
+    this._fiatPrice.next(data.tezos.usd)
+  }
+
   updateState() {
     this.getColorOwners()
     this.getAuctions()
     this.getPreviousAuctions()
     this.getAuctionBids()
+    this.getPrice()
 
     let subscription = interval(10_000).subscribe((x) => {
       console.log('refresh')
