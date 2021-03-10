@@ -31,12 +31,15 @@ export async function getRandomNumber(num: number): Promise<string> {
 export class BeaconService {
   public wallet: BeaconWallet
   public network: Network = {
-    type: NetworkType.CUSTOM,
+    type: NetworkType.EDONET,
     rpcUrl: 'https://testnet-tezos.giganode.io',
   }
 
   constructor(private readonly storeService: StoreService) {
-    this.wallet = new BeaconWallet({ name: environment.appName })
+    this.wallet = new BeaconWallet({
+      name: environment.appName,
+      preferredNetwork: NetworkType.EDONET,
+    })
     this.wallet.client.subscribeToEvent(
       BeaconEvent.ACTIVE_ACCOUNT_SET,
       (activeAccount) => {
