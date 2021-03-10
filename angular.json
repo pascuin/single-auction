@@ -123,9 +123,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/",
-            "message": "Deploying latest changes",
-            "cname": "http://single-auction.papers.tech/"
+            "baseHref": "/single-auction/",
+            "message": "Deploying latest changes"
           }
         }
       }
