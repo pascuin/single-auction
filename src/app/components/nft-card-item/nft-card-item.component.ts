@@ -25,9 +25,9 @@ type ColorState =
   | 'own'
 
 @Component({
-  selector: 'app-color-card-item',
-  templateUrl: './color-card-item.component.html',
-  styleUrls: ['./color-card-item.component.scss'],
+  selector: 'app-nft-card-item',
+  templateUrl: './nft-card-item.component.html',
+  styleUrls: ['./nft-card-item.component.scss'],
 })
 export class ColorCardItemComponent implements OnInit {
   @Input()

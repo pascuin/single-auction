@@ -1,7 +1,4 @@
 .card {
-  .card-body {
-    padding: 0;
-  }
   .card--color--type__standard {
     .card--color--type__container {
       border-radius: 50%;
@@ -39,9 +36,11 @@
     }
   }
   .card--color__header {
-    height: 164px;
+    height: 100%;
+    min-height: 300px;
     border-radius: 16px;
     box-shadow: 0px 4px 12px rgb(0 0 0 / 12%);
+    background: center / cover no-repeat url('/assets/placeholder.jpg');
   }
   .card--color--type__container {
     width: 24px;

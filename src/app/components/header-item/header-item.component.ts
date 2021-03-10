@@ -17,7 +17,6 @@ export class HeaderItemComponent implements OnInit {
   connectedWallet$: Observable<AccountInfo | undefined> | undefined
 
   isCollapsed = true
-  dogVision = false
   constructor(
     private readonly router: Router,
     private readonly store$: Store<State>,
@@ -26,9 +25,6 @@ export class HeaderItemComponent implements OnInit {
   ) {
     this.connectedWallet$ = this.store$.select(
       (state) => (state as any).app.connectedWallet // TODO: Fix type
-    )
-    this.storeService.dogvision$.subscribe(
-      (dogVision) => (this.dogVision = dogVision)
     )
   }
 
@@ -44,9 +40,5 @@ export class HeaderItemComponent implements OnInit {
 
   openBlockexplorer() {
     this.beaconService.openAccountLink()
-  }
-
-  togglDogVision() {
-    this.storeService.dogvision$.next(!this.dogVision)
   }
 }

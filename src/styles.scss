@@ -59,10 +59,6 @@ $link-hover-decoration: none;
   font-weight: bold;
 }
 
-.container {
-  max-width: 1400px !important;
-}
-
 .card,
 .dropdown-menu {
   box-shadow: $box-shadow;
@@ -105,7 +101,7 @@ $link-hover-decoration: none;
 }
 
 app-auction-modal {
-  app-color-card-item {
+  app-nft-card-item {
     .h-100 {
       height: initial !important;
     }

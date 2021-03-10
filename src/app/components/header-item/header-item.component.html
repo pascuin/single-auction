@@ -1,7 +1,8 @@
 <div class="container p-0">
   <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand text-dark" href="#" routerLink=""
-      >tzcolors<small class="text-muted ml-1">A Tezos NFT Experiment</small></a
+      >OneOf
+      <!--<small class="text-muted ml-1">A Tezos NFT Experiment</small>--></a
     >
     <button
       class="hamburger hamburger--spring navbar-toggler p-0 d-md-none"
@@ -28,36 +29,8 @@
             class="nav-link text-dark"
             href="#"
             routerLinkActive="active"
-            routerLink="/explore"
-            >Explore</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link text-dark"
-            href="#"
-            routerLinkActive="active"
-            routerLink="/auctions"
-            >Auctions</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link text-dark"
-            href="#"
-            routerLinkActive="active"
-            routerLink="/watchlist"
-            >Watchlist</a
-          >
-        </li>
-
-        <li class="nav-item">
-          <a
-            class="nav-link text-dark"
-            href="#"
-            routerLinkActive="active"
-            routerLink="/my-colors"
-            >My Colors</a
+            routerLink="/introduction"
+            >Introduction</a
           >
         </li>
 
@@ -98,50 +71,6 @@
               <li role="menuitem">
                 <a class="dropdown-item" (click)="disconnectWallet()">
                   Disconnect Wallet
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="nav-item m-3">
-          <div class="btn-group" dropdown>
-            <button
-              id="button-animated"
-              dropdownToggle
-              type="button"
-              aria-controls="dropdown-animated"
-              class="btn btn-light btn-circle"
-            >
-              <fa-icon [icon]="['fas', 'cog']"></fa-icon>
-            </button>
-            <ul
-              id="dropdown-animated"
-              *dropdownMenu
-              class="dropdown-menu dropdown-menu-right"
-              role="menu"
-              aria-labelledby="button-animated"
-            >
-              <li role="menuitem">
-                <a
-                  class="dropdown-item"
-                  (click)="togglDogVision()"
-                  title="Dogvision"
-                >
-                  <fa-icon [icon]="['fas', 'dog']"></fa-icon
-                  ><span class="ml-2"> Dog Vision </span>
-                </a>
-              </li>
-              <li role="menuitem">
-                <a class="dropdown-item disabled">
-                  <fa-icon [icon]="['far', 'moon']"></fa-icon
-                  ><span class="ml-2">Dark Mode</span>
-                </a>
-              </li>
-              <li role="menuitem">
-                <a class="dropdown-item disabled">
-                  <fa-icon [icon]="['far', 'sun']"></fa-icon
-                  ><span class="ml-2">Light Mode</span>
                 </a>
               </li>
             </ul>

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { ColorCardItemComponent } from './color-card-item.component'
+import { ColorCardItemComponent } from './nft-card-item.component'
 
 describe('ColorCardItemComponent', () => {
   let component: ColorCardItemComponent

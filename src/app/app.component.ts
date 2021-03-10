@@ -11,8 +11,7 @@ import { StoreService } from './services/store/store.service'
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'tzcolors'
-  dogvision = false
+  title = 'OneOf'
 
   constructor(
     private readonly store$: Store<State>,
@@ -21,6 +20,5 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.store$.dispatch(actions.setupBeacon())
-    this.store.dogvision$.subscribe((dogvision) => (this.dogvision = dogvision))
   }
 }

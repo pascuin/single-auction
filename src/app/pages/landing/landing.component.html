@@ -1,359 +1,42 @@
 <div class="py-md-5 my-5">
-  <h1>
-    Unique
-    <b
-      ><span class="colors__c">c</span><span class="colors__o">o</span
-      ><span class="colors__l">l</span><span class="colors__o__2nd">o</span
-      ><span class="colors__r">r</span><span class="colors__s">s</span></b
-    >
-    as <b>NFT tokens</b> on Tezos
-  </h1>
-  <h1>one of each in existence</h1>
-  <h1>three categories</h1>
-  <small class="text-muted"
-    >Caution, smart contracts have not been audited by a third party</small
-  >
+  <h1>One <strong>song</strong></h1>
+  <h1>One <strong>NFT</strong> on Tezos</h1>
 </div>
-<div class="row py-5">
-  <div class="col-12 col-md-4 pb-3 pb-md-0">
-    <div class="card card--container__standard">
-      <div class="card--header card-img-top text-center pt-3 pb-5">
-        <h3 class="text-light py-3">Standard</h3>
-      </div>
-      <div
-        class="card--header--symbol__container d-flex justify-content-center"
-      >
-        <div
-          class="card--header--symbol d-flex justify-content-center align-items-center"
-        >
-          <h1 class="m-0">S</h1>
-        </div>
-      </div>
-      <div class="card-body text-center pt-0">
-        <p class="text-muted font-weight-light m-0">Colors</p>
-        <h3 class="pb-3">1530</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-12 col-md-4 pb-3 pb-md-0">
-    <div class="card card--container__epic">
-      <div class="card--header card-img-top text-center pt-3 pb-5">
-        <h3 class="text-light py-3">Epic</h3>
-      </div>
-      <div
-        class="card--header--symbol__container d-flex justify-content-center"
-      >
-        <div
-          class="card--header--symbol d-flex justify-content-center align-items-center"
-        >
-          <h1 class="m-0">E</h1>
-        </div>
-      </div>
-      <div class="card-body text-center pt-0">
-        <p class="text-muted font-weight-light m-0">Colors</p>
-        <h3 class="pb-3">128</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-12 col-md-4 pb-3 pb-md-0">
-    <div class="card card--container__legendary">
-      <div class="card--header card-img-top text-center pt-3 pb-5">
-        <h3 class="text-light py-3">Legendary</h3>
-      </div>
-      <div
-        class="card--header--symbol__container d-flex justify-content-center"
-      >
-        <div
-          class="card--header--symbol d-flex justify-content-center align-items-center"
-        >
-          <h1 class="m-0">L</h1>
-        </div>
-      </div>
-      <div class="card-body text-center pt-0">
-        <p class="text-muted font-weight-light m-0">Colors</p>
-        <h3 class="pb-3">32</h3>
-      </div>
-    </div>
+
+<div class="row py-5 mb-5">
+  <div *ngFor="let color of colors$ | async" class="col-12 py-3">
+    <app-nft-card-item [color]="color"></app-nft-card-item>
   </div>
 </div>
-<div
-  class="row justify-content-center align-items-center py-5 my-5 explore--container"
->
-  <div class="col-12">
-    <h1 class="text-center">
-      1690 unique
-      <b
-        ><span class="colors__c">c</span><span class="colors__o">o</span
-        ><span class="colors__l">l</span><span class="colors__o__2nd">o</span
-        ><span class="colors__r">r</span><span class="colors__s">s</span></b
-      >
-      in three categories
-    </h1>
-  </div>
-  <div class="col-12 col-md-3">
-    <button type="button" class="btn btn-block btn-light" routerLink="/explore">
-      Explore
-    </button>
-  </div>
-</div>
-<div class="py-5">
-  <h3>
-    Open Auctions - <strong>{{ colorsCount$ | async }}</strong>
-  </h3>
-</div>
-<div class="row pb-5 mb-5">
-  <div *ngFor="let color of colors$ | async" class="col-12 col-md-3 py-3">
-    <app-color-card-item [color]="color"></app-color-card-item>
-  </div>
-  <div
-    class="col-12 col-md-3 py-3 d-flex align-items-center justify-content-center"
-  >
-    <div class="auctions--decorator__1">
-      <img src="/assets/auctions-decorator-1.svg" />
-    </div>
-    <div class="auctions--decorator__2">
-      <img src="/assets/auctions-decorator-2.svg" />
-    </div>
-    <button
-      type="button"
-      class="btn btn-block btn-light mx-3"
-      routerLink="/auctions"
-    >
-      View all open auctions
-    </button>
-  </div>
-</div>
-<div class="pt-5 pb-3">
-  <h3>How it works</h3>
-</div>
-<div class="how-it-works__container">
-  <div class="row">
-    <div class="col-12 col-md-4 py-3 d-flex align-items-center">
-      <div class="how-it-works__explanation">
-        <h5>Initial Auctions</h5>
-        <p>Each color artwork is sold in an inital account.</p>
-        <p>
-          The inital account has a duration of 7 days. On completion, the
-          highest bidder wins the color and can claim it.
-        </p>
-        <p>The reward of all initial accounts go to a specified address.</p>
-      </div>
-    </div>
-    <div class="col-12 col-md-3 offset-md-1 d-none d-md-block">
-      <div class="card card__initial">
-        <div class="card-body d-flex flex-column">
-          <div
-            class="card--color__header card--color--type__standard d-flex justify-content-end align-items-end m-4"
-            style="background-color: #ffbf00"
-          >
-            <div class="card--color--type__container m-2">
-              <div
-                class="card-color--type--symbol d-flex justify-content-center align-items-center"
-              >
-                <p class="m-0">L</p>
-              </div>
-            </div>
-          </div>
-          <div class="px-4 d-flex flex-column">
-            <h3 class="m-0">Amber</h3>
-            <p class="text-muted font-weight-light">#26 • Legendary</p>
-            <div class="row py-2">
-              <div class="col">
-                <p class="font-weight-light text-muted">
-                  This NFT is not owned by anyone yet.
-                </p>
-                <p class="font-weight-light text-muted">
-                  Bid on it to start the auction.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-auto">
-          <div class="p-4">
-            <button type="button" class="btn btn-block btn-light">
-              <span>Start Auction - <strong>1 tez</strong></span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-md-3 d-none d-md-block">
-      <div class="card card_auction">
-        <div class="card-body d-flex flex-column">
-          <div
-            class="card--color__header card--color--type__standard d-flex justify-content-end align-items-end m-4"
-            style="background-color: #e0115f"
-          >
-            <div class="card--color--type__container m-2">
-              <div
-                class="card-color--type--symbol d-flex justify-content-center align-items-center"
-              >
-                <p class="m-0">L</p>
-              </div>
-            </div>
-          </div>
-          <div class="px-4 d-flex flex-column">
-            <h3 class="m-0">Ruby</h3>
-            <p class="text-muted font-weight-light">#1342 • Legendary</p>
-            <div class="row py-2">
-              <div class="col">
-                <div class="row py-2">
-                  <div class="col">
-                    <h3 class="m-0 font-weight-light">18 tez</h3>
-                    <p class="text-muted font-weight-light">Price</p>
-                  </div>
-                  <div class="col text-right">
-                    <h3 class="m-0 font-weight-light">01:24:41</h3>
-                    <p class="text-muted font-weight-light">Time Left</p>
-                  </div>
-                </div>
-                <p class="m-0 font-weight-light">tz1Mj...UAdtT</p>
-                <p class="text-muted font-weight-light m-0">Highest Bidder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-auto">
-          <div class="p-4 mx-4 pt-5">
-            <div class="input-group">
-              <input
-                type="number"
-                class="form-control"
-                aria-label="Amount"
-                step="0.1"
-                placeholder="18.1"
-              />
-              <span class="input-group-prepend">
-                <button type="button" class="btn btn-light">Bid</button>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-4 offset-md-1 py-3 d-flex align-items-center">
-      <div class="how-it-works__explanation">
-        <h5>Auctions</h5>
-        <p>
-          An owner of a color artwork can create a new auction and specify the
-          minimum bid amount and the auction duration.
-        </p>
-        <p>Each bid additionally extends the auction end time by 5 minutes.</p>
-        <p>
-          The highest bidder can claim the token and the previous owner can
-          claim the reward.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+
 <div class="pt-5 pb-3 mt-5">
   <h3>FAQ</h3>
 </div>
 <div class="row">
   <div class="col-12 col-md-6">
     <accordion>
-      <accordion-group heading="What are NFTs?">
-        A non-fungible token (NFT) is a special type of cryptographic token
-        which represents something unique; non-fungible tokens are thus not
-        mutually interchangeable. This means each color artwork is represented
-        by one unique token that only exists once.
+      <accordion-group heading="Lorem ipsum">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
       </accordion-group>
 
-      <accordion-group heading="How is this project funded?">
-        This project was created on a voluntary basis during our free time and
-        we didn't receive any funding for it.
-      </accordion-group>
-      <accordion-group
-        heading="Who receives the rewards of the inital auctions?"
-      >
-        <p>
-          The rewards of all initial auctions go to the
-          <a
-            href="https://tezblock.io/account/tz1RKmJwoAiaqFdjQYSbFy1j7u7UhEFsqXq7"
-            target="_blank"
-            >tz1RKmJwoAiaqFdjQYSbFy1j7u7UhEFsqXq7</a
-          >
-          address. <br />
-          Those funds will be distributed among the teams that created the
-          tooling we used to create tzcolors. The exact details will be decided
-          on at a later stage.
-        </p>
-        <p>
-          100% of the rewards of all other auctions go directly to the previous
-          owner of the token.
-        </p>
-      </accordion-group>
-      <accordion-group heading="How does it work?">
-        <p>
-          After the launch, all color artworks are available. If someone wants a
-          color artwork, an initialy auction can be started. The price of the
-          inital auctions always start at 1 tez and last for 5 days during which
-          everyone can bid for the color.
-        </p>
-        <p>
-          The highest bidder at the end of an auction gets the color artwork.
-        </p>
-        <p>
-          After an auction, the token and the reward have to be claimed. Anyone
-          can submit the claim transaction, which will both send the token to
-          the new owner and transfer the amount to the previous owner.
-        </p>
-        <p>
-          If a bid is placed during the last 5 minutes, the countdown is
-          extended to 5 minutes.
-        </p>
-        <p>
-          Anyone can put their own colors up for auction again. For those
-          auctions, 100% of the reward goes to the owner, tzcolors does not take
-          a commission.
-        </p>
-      </accordion-group>
-      <accordion-group heading="What was your motivation to create tzcolors?">
-        <p>
-          This project is a showcase of the latest technology available in the
-          Tezos ecosystem. Namely, NFTs using the FA2 standard, an Auction House
-          Contract, Beacon for dApp to Wallet communication, as well as Taquito
-          for the contract abstraction in the frontend.
-        </p>
-      </accordion-group>
-      <accordion-group heading="Where are the contracts?">
-        <p>
-          <a
-            href="https://tzkt.io/KT1CpeSQKdkhWi4pinYcseCFKmDhs5M74BkU"
-            target="_blank"
-            >Auction House Contract</a
-          >
-        </p>
-        <p>
-          <a
-            href="https://tzkt.io/KT1FyaDqiMQWg7Exo7VUiXAgZbd2kCzo3d4s"
-            target="_blank"
-            >NFT Token Contract</a
-          >
-        </p>
-      </accordion-group>
-      <accordion-group heading="Has the contract been audited?">
-        <p>
-          Neither the smart contract code, nor the frontend code was audited by
-          a third party. We did review the contracts interally and tested it
-          extensively over the last couple of weeks.
-        </p>
-      </accordion-group>
-      <accordion-group
-        heading="Where can the code of the contracts and frontend be found?"
-      >
-        The code of both the contracts and the frontend can be found on
-        <a href="https://github.com/tzcolors" target="_blank">GitHub</a>.
-      </accordion-group>
-      <accordion-group heading="Where are the colors from?">
-        The colors were taken from
-        <a href="https://encycolorpedia.com" target="_blank" rel="”noreferrer”"
-          >encycolorpedia</a
-        >.
+      <accordion-group heading="Lorem ipsum">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
       </accordion-group>
     </accordion>
   </div>

@@ -1,10 +1,7 @@
 <div *ngIf="color" class="modal-body">
   <div class="row">
-    <div class="col-12 col-md-5 pb-3 pb-md-0">
-      <app-color-card-item
-        [color]="color"
-        [isModal]="true"
-      ></app-color-card-item>
+    <div class="col-12 pb-3">
+      <app-nft-card-item [color]="color" [isModal]="true"></app-nft-card-item>
     </div>
     <div class="col-12 col-md-7">
       <div class="card mb-3" *ngIf="history">
@@ -57,6 +54,7 @@
           <ng-container *ngIf="!history"> No auction in progress </ng-container>
         </div>
       </div>
+      <!--
       <div *ngIf="previousAuctionGraph.length > 0" class="card">
         <div class="card-body">
           <h3 class="mb-5">Previous Auctions</h3>
@@ -163,6 +161,7 @@
           </div>
         </div>
       </div>
+      -->
     </div>
   </div>
 </div>
