@@ -11,7 +11,7 @@ import { StoreService } from './services/store/store.service'
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'OneOf'
+  title = 'OO'
 
   constructor(
     private readonly store$: Store<State>,

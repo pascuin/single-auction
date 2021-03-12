@@ -1,9 +1,9 @@
 [
   {
     "token_id": 0,
-    "name": "OneOf token",
+    "name": "OO",
     "description": "Description goes here",
-    "symbol": "ONEOF",
+    "symbol": "OO",
     "decimals": 0,
     "isBooleanAmount": true,
     "shouldPreferSymbol": true,
